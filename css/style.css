@@ -124,7 +124,7 @@ h1{
 	-ms-transform: scale(1.2);
 	-o-transform: scale(1.2);
 }
-.social-icons a i.fa-instagram:hover{
+.social-icons a i.fa-github:hover{
 	color: #D5C7AA;
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
@@ -140,7 +140,7 @@ h1{
 	-ms-transform: scale(1.2);
 	-o-transform: scale(1.2);
 }
-.social-icons a i.fa-google-plus:hover{
+.social-icons a i.fa-stack-overflow:hover{
 	color: #DA4835;
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
@@ -371,7 +371,7 @@ ul.navbar li a:hover, ul.navbar li a.active, .navbar-default .navbar-nav>li>a:ho
 	background: #00ACED;
 	border-color: #00ACED;
 }
-.footer a i.fa-instagram:hover{
+.footer a i.fa-github:hover{
 	background: #3E6B94;
 	border-color: #3E6B94;
 }
@@ -379,7 +379,7 @@ ul.navbar li a:hover, ul.navbar li a.active, .navbar-default .navbar-nav>li>a:ho
 	background: #0077B5;
 	border-color: #0077B5;
 }
-.footer a i.fa-google-plus:hover{
+.footer a i.fa-stack-overflow:hover{
 	background: #D54831;
 	border-color: #D54831;
 }
