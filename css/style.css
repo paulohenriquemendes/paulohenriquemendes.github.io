@@ -68,11 +68,11 @@ h1{
 	padding: 0;
 }
 .banner{
-	background: url(../img/banner.jpg);
+	background: url(../img/banner3.png);
 	background-repeat: no-repeat;
 	background-position: center;
-	-webkit-background-size: cover;
 	background-size: cover;
+	-webkit-background-size: cover;
 	height: 500px;
 	position: relative;
 	z-index: 111;
@@ -108,7 +108,7 @@ h1{
 	-o-transition: all .5s ease 0s;
 	-ms-transition: all .5s ease 0s;
 }
-.social-icons a i.fa-facebook:hover{
+.social-icons a i.fa-behance:hover{
 	color: #3A5795;
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
@@ -140,7 +140,7 @@ h1{
 	-ms-transform: scale(1.2);
 	-o-transform: scale(1.2);
 }
-.social-icons a i.fa-stack-overflow:hover{
+/* .social-icons a i.fa-stack-overflow:hover{
 	color: #DA4835;
 	transform: scale(1.2);
 	-webkit-transform: scale(1.2);
@@ -148,6 +148,16 @@ h1{
 	-ms-transform: scale(1.2);
 	-o-transform: scale(1.2);
 }
+ */
+.social-icons a i.fa-instagram:hover{
+	color: #DA4835;
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+}
+
 .social-icons{
 	margin-bottom: 66px;
 }
@@ -296,9 +306,10 @@ ul.navbar li a:hover, ul.navbar li a.active, .navbar-default .navbar-nav>li>a:ho
 
 /*******Footer********/
 .footer{
-	background: #2c3e50;
-	color: #fff;
+	background: #14152d;
+	color: #cccbcb;
 	padding-top: 53px;
+	text-align: center;
 }
 .footer h3{
 	font-size: 24px;
@@ -311,7 +322,7 @@ ul.navbar li a:hover, ul.navbar li a.active, .navbar-default .navbar-nav>li>a:ho
 .footer input{
 	width: 100%;
 	padding: 10px;
-	color: #fff;
+	color: #cccbcb;
 	margin-top: 10px;
 	border: 1px solid #495e74;
 	background: #2c3e50;
@@ -567,7 +578,7 @@ ul.navbar li a:hover, ul.navbar li a.active, .navbar-default .navbar-nav>li>a:ho
 	font-size: 18px;
 	color: #444444;
 	margin-top: 20px;
-	text-align: left;
+	text-align: center;
 }
 
 /******Contact Page*******/
