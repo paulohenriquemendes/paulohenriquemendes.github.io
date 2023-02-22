@@ -89,7 +89,7 @@ h1{
 }
 .header h4{
 	font-size: 18px;
-	color: #D5C7AA;
+	color: #fff;
 	margin-top: 0;
 	line-height: 1;
 	margin-bottom: 18px;
@@ -280,8 +280,8 @@ ul.navbar li a:hover, ul.navbar li a.active, .navbar-default .navbar-nav>li>a:ho
 	padding-bottom: 65px;
 }
 .read-more a:hover{
-	background: #2C3E50;
-	border-color: #2C3E50;
+	background: #14152d;
+	border-color: #14152d;
 	color: #fff;
 }
 .post-pagination{
@@ -325,14 +325,14 @@ ul.navbar li a:hover, ul.navbar li a.active, .navbar-default .navbar-nav>li>a:ho
 	padding: 10px;
 	color: #cccbcb;
 	margin-top: 10px;
-	border: 1px solid #495e74;
-	background: #2c3e50;
+	border: 1px solid #14152d;
+	background: #14152d;
 }
 .footer input[type="submit"] {
 	font-size: 14px;
 	color: #bbbbbb;
 	text-transform: uppercase;
-	background: #3a4e62;
+	background: #14152d;
 	border: 0;
 	margin-bottom: 20px;
 	transition: all .5s ease 0s;
@@ -342,7 +342,7 @@ ul.navbar li a:hover, ul.navbar li a.active, .navbar-default .navbar-nav>li>a:ho
 	-ms-transition: all .5s ease 0s;
 }
 .footer input[type="submit"]:hover{
-	background: #253544;
+	background: #14152d;
 }
 .footer a{
 	font-size: 18px;
@@ -603,7 +603,7 @@ ul.navbar li a:hover, ul.navbar li a.active, .navbar-default .navbar-nav>li>a:ho
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
-    background: #3a4e62;
+    background: #14152d;
     border: 0;
     margin-bottom: 20px;
     transition: all .5s ease 0s;
