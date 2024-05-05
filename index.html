@@ -1,182 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	<title>Paulo Mendes</title>
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Google fonts -->
-	<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-	<!-- modernizr -->
-	<script src="js/modernizr.js"></script>
-	<!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font: bold 11pt Arial;
+            background-color: rgba(238, 238, 108, 0.884);
+            text-align: left;
+            display: grid;
+        }
+    </style>
 </head>
 <body>
-	<div class="banner" id="home"></div>
-	<header class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 no-padding">
-					<div class="col-md-12 text-center user">
-						<img src="img/user.png" alt="Me" class="img-circle">
-						<h1>Paulo Henrique Mendes</h1>
-						<h4>UX/UI/Brand &amp; Front-end</h4>
-						<div class="social-icons">
-							<a href="https://github.com/paulohenriquemendes"><i class="fa fa-github"></i></a>
-							<a href="https://www.behance.net/phmendes"><i class="fa fa-behance"></i></a>
-							<a href="https://www.instagram.com/phmendes.designer/"><i class="fa fa-instagram"></i></a>
-							<a href="https://www.linkedin.com/in/paulo-henrique-mendes"><i class="fa fa-linkedin"></i></a>
-							<!-- <a href="http://pt.stackoverflow.com/users/61479/paulo-henrique-mendes"><i class="fa fa-stack-overflow"></i></a> -->
-						</div>
-						
-					</div>
-					<!-- nav starts here -->
-					
-				</div>
-			</div>
-		</div>
-	</header><!-- end of header section -->
 
-<!-- 
-	<section class="content">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 no-padding">
-					<div class="col-md-12">
-						<article class="single-post">
-							<div class="post-header text-center">
-								<h2><a href="libreefficeouepeneffice.html">LibreOffice ou OpenOffice? Veja quem pode substituir Word e Excel ?</a></h2>
-								<span>Escrito por <a href="#">Paulo Mendes</a> </a> em 20 de Novembro, 2016 </span>
-							</div>
-							<div class="post-content ">
-								 <a href="post1.html"><img src="img/a.png" alt="" class="img-responsive"></a> -->
-								<!-- <p class="read-more text-center" href="libreefficeouepeneffice.html">Mas qual deles pode substituir programas como o Word e Excel, da Microsoft? Conheça um pouco mais sobre cada um e descubra qual deles é a melhor opção.</p> -->
-								<!-- <div class="read-more text-center">
-									<a href="#">Read the article</a>
-								</div>
-							</div>
-						</article> -->
+<!--
+    Formulários
+    
+    Para que serve?
+    - Capturar dados de entrada (input)
+    - Interação
+    - Controle
 
-				<!-- 		<div class="post-pagination">
-							<div class="col-md-6 col-sm-6 col-xs-6">
-								<ul class="list-inline">
-									<li class="current"><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-								</ul>
-							</div>
-							<div class="col-md-6 col-sm-6 col-xs-6 text-right">
-								<a href="#">Older Articles <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div> 
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="content">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 no-padding">
-					<div class="col-md-12">
-						<article class="single-post">
-							<div class="post-header text-center">
-								<h2><a href="angularjs2vsreact.html">Angular JS 2 ou React ?</a></h2>
-								<span>Escrito por <a href="#">Paulo Mendes</a> </a> em 15 de Novembro, 2016 </span>
-							</div>
-							<div class="post-content ">
-								<a href="post1.html"><img src="img/a.png" alt="" class="img-responsive"></a> 
-								<p class="read-more text-center" href="angularjs2vsreact.html">A melhor escolha JS 2017- Frameworks full-stack</p>
-								 <div class="read-more text-center">
-									<a href="#">Read the article</a>
-								</div> 
-							</div>
-						</article>
+    <form>
+    - É um elemento que definirá um formulário
+    - É um container estilo <section>
 
-						<div class="post-pagination">
-							<div class="col-md-6 col-sm-6 col-xs-6">
-								<ul class="list-inline">
-									<li class="current"><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-								</ul>
-							</div>
-							<div class="col-md-6 col-sm-6 col-xs-6 text-right">
-								<a href="#">Older Articles <i class="fa fa-angle-double-right"></i></a>
-							</div>
-						</div> 
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
- 
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="col-md-12">
-						<h3>Sobre</h3>
-						<p>Designer apaixonado por UX/UI, desenvolvedor entusiasta em tecnologias JavaScript para front-end e estrategista de marcas.</p>
-						<!-- <address>
-							E-mail: p-h-m@outlook.com <br>
-							Phone: +55 (85) 99865-1903 || 99299-4767<br>
-							Chorozinho, CE
-						</address> -->
-					<!-- </div>
-					<div class="col-md-6">
-						<h3>Inscreva-se &amp; Compartilhe</h3>
-						<p>Entre com seu endereço de email para receber as notificações de nossas portagens recentes.</p>
-						<form action="mailto:paulohenriquedeoliveiramendes@gmail.com" method="post" enctype="text/plain">
-							<input type="email" placeholder="Entre com seu email">
-							<input type="submit" value="ENVIAR">
-						</form>
-						<div class="socials text-center">
-							<a href="https://github.com/pauloh17"><i class="fa fa-github"></i></a>
-							<a href="https://www.linkedin.com/in/paulo-henrique-mendes"><i class="fa fa-linkedin"></i></a>
-							<a href="http://pt.stackoverflow.com/users/61479/paulo-henrique-mendes"><i class="fa fa-stack-overflow"></i></a>
-						</div>
-					</div> -->
-				</div>
-			</div>
-		</div>
-		<div class="text-center">
-			<a href="#home"><i class="fa fa-arrow-up"></i></a>
-		</div>
-		<div class="text-center" class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<p>&copy; 2023 — Desenvolvido por <a href="https://paulohenriquemendes.github.io">Paulo Henrique Mendes</a></p>
-					<!-- </div>
-					<div class="col-md-6 footer-menu text-right">
-						<ul class="list-inline">
-							<li><a href="index.html">Blog</a></li>
-							<li><a href="works.html">Projetos</a></li>
-							<li><a href="contact.html">Contato</a></li> -->
-						</ul>
-					</div> 
-				</div>
-			</div>
-		</div>
-	</footer>
+    Atributos básicos
+    - action: para onde vai ser enviado, em branco nao envia pra nenhum
+        canto e volta para a página.
+    - method: POST e GET, por enquanto, GET é um verbo HTTP que envia para action (destinatario) de
+      uma forma que apresenta dados na url.
+    POST por sua vez nao apresenta dados na URL
 
-	
-	<!-- script tags
-	============================================================= -->
-	<script src="js/jquery-2.1.1.js"></script>
-	<script src="js/smoothscroll.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/custom.js"></script>
+    Obs: Não criamos o form dentro de form, pode ser que ele nao entenda pra onde enviar os daods 
+-->
+    
+    <form action="POST" name="primeiro_formulario" id="formulario">
+
+        <fieldset> <!--CRIA O AGRUPAMENTO-->
+            <legend>Cadastro de aluno</legend> <!--NOME DO AGRUPAMENTO-->
+
+            <div>
+                <!--Linkei pelo for e o id, se clicar 
+                somente na palavra nome que esta
+                entre o label, ele faz a seta de
+                entrada de dados dentro do input-->
+                <label for="id_nome">Nome: 
+                    <input type="text" name="nome" id="id_nome"
+                    required 
+                    placeholder="Informe seu nome"
+                    minlength="6" maxlength="50">
+                    <!---minlenght / maxlength* 
+                    0 mínimo e/ou máximo valor que o campo irá conter-->
+                </label>
+
+
+                <br/>
+            </div>
+
+            <div>
+                <label for="id_email"> Email institucional:
+                    <input type="email" name="email" id="id_email"
+                    required 
+                    placeholder="Informe seu e-mail"
+                    size="60"
+                    pattern="^[\w\.-]+@aluno\.ce\.gov\.br$"
+                    title="Somente emails @aluno.ce.gov.br serão aceitos">
+                    <!---size indicando ao tamanho  numérico indicando quantos caracteres -->
+                    <!---Uso de expressão regular para validar o campo - 
+                    exemplo: o usuário só poderá colocar email do domínio rocketseat.com.br
+                    * pattern=".+@aluno\.ce\.gov\.com\.br" 
+                
+                    ^: Este símbolo indica o início da string, ou seja, 
+                    a expressão deve começar a partir desse ponto.
+                    [\w\.-]+: Esta parte corresponde ao nome do usuário do e-mail. 
+                    [\w\.-] significa que pode haver letras (\w), números, ponto (.), ou hífen (-). 
+                    O sinal de mais (+) indica que essa sequência pode se repetir uma ou mais vezes, 
+                    garantindo que tenhamos pelo menos um caractere no nome do usuário.
+                    @: Este é o caractere '@' literal que separa o nome de usuário do domínio.
+                    aluno\.ce\.gov\.br: Aqui temos o domínio que estamos procurando, 
+                    "aluno.ce.gov.br", com cada ponto (.) escapado por uma barra invertida 
+                    () para que seja interpretado literalmente como um ponto e não como
+                    um caractere especial na expressão regular.
+                    $: Este símbolo indica o fim da string, ou seja, 
+                    a expressão deve terminar nesse ponto.
+
+                    -->
+                </label>
+            </div>
+
+             <!---- list
+            *o id de uma tag <datalist> que está no mesmo documento 
+            * <datalist> irá conter uma lista de valores prédefinidos a fim de sugerir ao usuário, quais valores estão disponíveis
+            * Os valores do <datalist> que não forem
+            compatíveis com o campo, não serão apresentados
+            como sugestão
+            --> 
+
+            <!-- <div>
+                <datalist id="list_cor_pele">
+                    <option value="preto">Preto</option>
+                    <option value="pardo">Pardo</option>
+                    <option value="branco">Branco</option>
+                    <option value="indigena">Indígena</option>
+                </datalist>
+                <label for="cores">Cor:
+                    <input type="text" id="cores" list="list_cor_pele"/><br />
+                </label>
+            </div> -->
+
+            <!-- SELECT-->
+            <div>
+                <label for="lista_cor_pele">Cor:
+                    <select name="cor_pele" id="lista_cor_pele">
+                        <option value="" disabled selected> Selecione sua cor</option>
+                        <option value="preto">Preto</option>
+                        <option value="pardo">Pardo</option>
+                        <option value="branco">Branco</option>
+                        <option value="indigena">Indígena</option>
+                    </select><br/>
+                </label>
+            </div>
+
+            <!--pattern
+            * Expressão regular para validar o que está sendo digitado no campo
+            * Altamente recomendado o uso de um padrão de
+            segurança alta de senhas
+            * exemplo: queremos que a senha contenha
+            caracteres hexadecimais com o limite de no mínimo 4 e no máximo 8 caracteres _pattern="[0-9a-fA-F]{4,8}"
+            -->
+
+            <!--inputmode
+                * poderá alterar o uso do teclado em smartphones
+                * exemplo: queremos que o cliente só adicione
+                números * inputmode="numeric"
+            -->
+
+            <!-- REGEX - Expressão regular (Regular expression)
+                Aqui está o que cada parte do padrão significa:
+
+                \(: Corresponde ao caractere de parêntese aberto "(".
+                \d{2}: Corresponde a exatamente dois dígitos consecutivos.
+                \): Corresponde ao caractere de parêntese fechado ")".
+                " ": Corresponde a um espaço em branco.
+                \d{5}: Corresponde a exatamente cinco dígitos consecutivos.
+                -: Corresponde ao caractere de hífen "-".
+                \d{4}: Corresponde a exatamente quatro dígitos consecutivos.
+            -->
+
+            <div>
+                <label for="id_telefone">Telefone: 
+                    <input type="text" id="id_telefone"  name="telefone"
+                    inputmode="numeric"
+                    pattern="\(\d{2}\) \d{5}-\d{4}" 
+                    title="Coloque no mínimo 4 caracteres e no máximo 15 caracteres"
+                    >
+                </label>
+            </div>
+
+            <!--- autocomplete
+                * on: permite a sugestão de: new-password ou current-password (se ja tiver a senha da pagina, ele tenta te dar um auto complete)
+                * off: desabilita a opção de autocompletar
+                * new-password: o navegador poderá sugerir uma nova senha
+            -->
+            <div>
+                <label for="id_senha"> Senha:
+                    <input name="senha" type="password" autocomplete="new-password">
+                </label>
+            </div>
+
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <script type="module">
+        // Importação
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+    
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyBD_3WzPZBm83lUW0pMLt48IdLpkovC1a8",
+          authDomain: "teste-484d9.firebaseapp.com",
+          projectId: "teste-484d9",
+          storageBucket: "teste-484d9.appspot.com",
+          messagingSenderId: "631993282858",
+          appId: "1:631993282858:web:708a7715ffc0fda626ee53",
+          measurementId: "G-ZQKVK9DSWK"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const database = getDatabase();
+
+        // Capture o formulário
+        let form = document.getElementById("formulario");
+        form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Evita o envio padrão do formulário
+
+      // Capture os valores do formulário
+      const nome = form['nome'].value;
+      const email = form['email'].value;
+      const cor_pele = form['cor_pele'].value;
+      const telefone = form['telefone'].value;
+      const senha = form['senha'].value;
+
+      // Enviar os dados para o Firebase
+      const usersRef = ref(database, 'users');
+      push(usersRef, {
+        nome: nome,
+        email: email,
+        cor_pele: cor_pele,
+        telefone: telefone,
+        senha: senha
+
+      }).then(() => {
+        console.log('Dados enviados com sucesso!');
+        // Faça qualquer ação adicional aqui, como redirecionar o usuário ou exibir uma mensagem de sucesso.
+      }).catch((error) => {
+        console.error('Erro ao enviar dados:', error);
+      });
+    });
+    </script> 
 </body>
 </html>
