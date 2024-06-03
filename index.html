@@ -3,195 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Formulário 03 - Firebase</title>
+
     <style>
         body{
             font: bold 11pt Arial;
-            background-color: rgba(238, 238, 108, 0.884);
-            text-align: left;
-            display: grid;
+        }
+        #id_nome{
+            width: 300px;
+        }
+        .titulo_pai{
+            font: bold 8pt Arial;
         }
     </style>
 </head>
 <body>
-
-<!--
-    Formulários
-    
-    Para que serve?
-    - Capturar dados de entrada (input)
-    - Interação
-    - Controle
-
-    <form>
-    - É um elemento que definirá um formulário
-    - É um container estilo <section>
-
-    Atributos básicos
-    - action: para onde vai ser enviado, em branco nao envia pra nenhum
-        canto e volta para a página.
-    - method: POST e GET, por enquanto, GET é um verbo HTTP que envia para action (destinatario) de
-      uma forma que apresenta dados na url.
-    POST por sua vez nao apresenta dados na URL
-
-    Obs: Não criamos o form dentro de form, pode ser que ele nao entenda pra onde enviar os daods 
--->
-    
-    <form action="POST" name="primeiro_formulario" id="formulario">
-
-        <fieldset> <!--CRIA O AGRUPAMENTO-->
-            <legend>Cadastro de alunos</legend> <!--NOME DO AGRUPAMENTO-->
+    <form action="" method="post" id="form_part3">
+        <fieldset>
+            <legend>Trabalhe conosco</legend>
 
             <div>
-                <!--Linkei pelo for e o id, se clicar 
-                somente na palavra nome que esta
-                entre o label, ele faz a seta de
-                entrada de dados dentro do input-->
-                <label for="id_nome">Nome: 
-                    <input type="text" name="nome" id="id_nome"
-                    required 
-                    placeholder="Informe seu nome"
-                    minlength="6" maxlength="50">
-                    <!---minlenght / maxlength* 
-                    0 mínimo e/ou máximo valor que o campo irá conter-->
+                <label for="id_nome">Nome completo:
+                    <input type="text" id="id_nome"
+                    name="nome_completo"
+                    placeholder="Informe seu nome completo"
+                    minlength="7" maxlength="50">
                 </label>
-
-
-                <br/>
             </div>
 
             <div>
-                <label for="id_email"> Email institucional:
-                    <input type="email" name="email" id="id_email"
-                    required 
-                    placeholder="Informe seu e-mail"
-                    size="60"
-                    pattern="^[\w\.-]+@aluno\.ce\.gov\.br$"
-                    title="Somente emails @aluno.ce.gov.br serão aceitos">
-                    <!---size indicando ao tamanho  numérico indicando quantos caracteres -->
-                    <!---Uso de expressão regular para validar o campo - 
-                    exemplo: o usuário só poderá colocar email do domínio rocketseat.com.br
-                    * pattern=".+@aluno\.ce\.gov\.com\.br" 
-                
-                    ^: Este símbolo indica o início da string, ou seja, 
-                    a expressão deve começar a partir desse ponto.
-                    [\w\.-]+: Esta parte corresponde ao nome do usuário do e-mail. 
-                    [\w\.-] significa que pode haver letras (\w), números, ponto (.), ou hífen (-). 
-                    O sinal de mais (+) indica que essa sequência pode se repetir uma ou mais vezes, 
-                    garantindo que tenhamos pelo menos um caractere no nome do usuário.
-                    @: Este é o caractere '@' literal que separa o nome de usuário do domínio.
-                    aluno\.ce\.gov\.br: Aqui temos o domínio que estamos procurando, 
-                    "aluno.ce.gov.br", com cada ponto (.) escapado por uma barra invertida 
-                    () para que seja interpretado literalmente como um ponto e não como
-                    um caractere especial na expressão regular.
-                    $: Este símbolo indica o fim da string, ou seja, 
-                    a expressão deve terminar nesse ponto.
-
+                <label for="id_data">Data de nascimento:
+                    <input type="date" name="data" id="id_data">
+                    <!--
+                        <input type="datetime-local" value="2007-05-03">
+                        <input type="time">
+                        <input type="week">
+                        <input type="month">
                     -->
                 </label>
             </div>
 
-             <!---- list
-            *o id de uma tag <datalist> que está no mesmo documento 
-            * <datalist> irá conter uma lista de valores prédefinidos a fim de sugerir ao usuário, quais valores estão disponíveis
-            * Os valores do <datalist> que não forem
-            compatíveis com o campo, não serão apresentados
-            como sugestão
-            --> 
-
-            <!-- <div>
-                <datalist id="list_cor_pele">
-                    <option value="preto">Preto</option>
-                    <option value="pardo">Pardo</option>
-                    <option value="branco">Branco</option>
-                    <option value="indigena">Indígena</option>
-                </datalist>
-                <label for="cores">Cor:
-                    <input type="text" id="cores" list="list_cor_pele"/><br />
-                </label>
-            </div> -->
-
-            <!-- SELECT-->
             <div>
-                <label for="lista_cor_pele">Cor:
-                    <select name="cor_pele" id="lista_cor_pele">
-                        <option value="" disabled selected> Selecione sua cor</option>
-                        <option value="preto">Preto</option>
-                        <option value="pardo">Pardo</option>
-                        <option value="branco">Branco</option>
-                        <option value="indigena">Indígena</option>
-                    </select><br/>
+                <p class="titulo_pai">VAGAS DISPONÍVEIS</p>
+
+                <label for="id_dev">Dev Front-end JR
+                    <input type="radio" id="id_dev"
+                    name="cargo" value="dev_front_jr">
                 </label>
-            </div>
 
-            <!--pattern
-            * Expressão regular para validar o que está sendo digitado no campo
-            * Altamente recomendado o uso de um padrão de
-            segurança alta de senhas
-            * exemplo: queremos que a senha contenha
-            caracteres hexadecimais com o limite de no mínimo 4 e no máximo 8 caracteres _pattern="[0-9a-fA-F]{4,8}"
-            -->
-
-            <!--inputmode
-                * poderá alterar o uso do teclado em smartphones
-                * exemplo: queremos que o cliente só adicione
-                números * inputmode="numeric"
-            -->
-
-            <!-- REGEX - Expressão regular (Regular expression)
-                Aqui está o que cada parte do padrão significa:
-
-                \(: Corresponde ao caractere de parêntese aberto "(".
-                \d{2}: Corresponde a exatamente dois dígitos consecutivos.
-                \): Corresponde ao caractere de parêntese fechado ")".
-                " ": Corresponde a um espaço em branco.
-                \d{5}: Corresponde a exatamente cinco dígitos consecutivos.
-                -: Corresponde ao caractere de hífen "-".
-                \d{4}: Corresponde a exatamente quatro dígitos consecutivos.
-            -->
-
-            <div>
-                <label for="id_telefone">Telefone: 
-                    <input type="text" id="id_telefone"  name="telefone"
-                    inputmode="numeric"
-                    pattern="\(\d{2}\) \d{5}-\d{4}" 
-                    title="Coloque no mínimo 4 caracteres e no máximo 15 caracteres"
-                    >
-                </label>
-            </div>
-
-            <!--- autocomplete
-                * on: permite a sugestão de: new-password ou current-password (se ja tiver a senha da pagina, ele tenta te dar um auto complete)
-                * off: desabilita a opção de autocompletar
-                * new-password: o navegador poderá sugerir uma nova senha
-            -->
-            <div>
-                <label for="id_senha"> Senha:
-                    <input name="senha" type="password" autocomplete="new-password">
+                <label for="id_uiux">Designer UI/UX
+                    <input type="radio" id="id_uiux"
+                    name="cargo" value="dg_uiux">
                 </label>
             </div>
 
             <div>
+                <p class="titulo_pai">HABILIDADES</p>
+
+                <label for="id_html5">HTML5
+                    <input type="checkbox" id="id_html5"
+                    name="habilidades" value="html5">
+                </label>
+
+                <label for="id_js">Javascript
+                    <input type="checkbox" id="id_js"
+                    name="habilidades" value="js">
+                </label>
+
+                <label for="id_figma">Figma
+                    <input type="checkbox" id="id_figma"
+                    name="habilidades" value="figma">
+                </label>
+            </div>
+
+            <div>
+                <label for="id_textarea">Cursos:
+                    <textarea name="cursos_textarea" 
+                    id="id_textarea" 
+                    cols="30" rows="4"></textarea>
+                </label>
+            </div>
+
+            <div>
+                </br>
                 <button type="submit">Enviar</button>
             </div>
+
         </fieldset>
     </form>
 
+
+    <!-- <script>
+        let form = document.getElementById("form_part2");
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault();
+
+            let nome = form.nome_completo.value;
+
+            console.log(nome)
+
+        })
+    </script> -->
+
     <script type="module">
+
         // Importação
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
         import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
-    
         
         const firebaseConfig = {
-          apiKey: "AIzaSyBD_3WzPZBm83lUW0pMLt48IdLpkovC1a8",
-          authDomain: "teste-484d9.firebaseapp.com",
-          projectId: "teste-484d9",
-          storageBucket: "teste-484d9.appspot.com",
-          messagingSenderId: "631993282858",
-          appId: "1:631993282858:web:708a7715ffc0fda626ee53",
-          measurementId: "G-ZQKVK9DSWK"
+            apiKey: "AIzaSyAwT1cYj702SJBkz3Viu62GaE-zbJWSn5w",
+            authDomain: "form-html-firebase.firebaseapp.com",
+            databaseURL: "https://form-html-firebase-default-rtdb.firebaseio.com",
+            projectId: "form-html-firebase",
+            storageBucket: "form-html-firebase.appspot.com",
+            messagingSenderId: "831437937429",
+            appId: "1:831437937429:web:056b37af3b6a064c8ce71c",
+            measurementId: "G-VVPL141W6M"
         };
     
         // Initialize Firebase
@@ -199,34 +128,66 @@
         const analytics = getAnalytics(app);
         const database = getDatabase();
 
-        // Capture o formulário
-        let form = document.getElementById("formulario");
-        form.addEventListener('submit', (e) => {
-      e.preventDefault(); // Evita o envio padrão do formulário
+        let form = document.getElementById("form_part3");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
 
-      // Capture os valores do formulário
-      const nome = form['nome'].value;
-      const email = form['email'].value;
-      const cor_pele = form['cor_pele'].value;
-      const telefone = form['telefone'].value;
-      const senha = form['senha'].value;
+            let vetor = [];
+            
+            //1ª RESOLUÇÃO - Percorrer com o FOR
+            // for(let i = 0; i < form.habilidades.length; i++){
+            //     if(form.habilidades[i].checked){
+            //         vetor[i] = form.habilidades[i].value;
+            //         console.log(form.habilidades[i].value)
+            //     }
+            // }
 
-      // Enviar os dados para o Firebase
-      const usersRef = ref(database, 'users');
-      push(usersRef, {
-        nome: nome,
-        email: email,
-        cor_pele: cor_pele,
-        telefone: telefone,
-        senha: senha
 
-      }).then(() => {
-        console.log('Dados enviados com sucesso!');
-        // Faça qualquer ação adicional aqui, como redirecionar o usuário ou exibir uma mensagem de sucesso.
-      }).catch((error) => {
-        console.error('Erro ao enviar dados:', error);
-      });
-    });
+            //2ª RESOLUÇÃO - Percorrer com o forEach
+            // form.habilidades.forEach((valor, index)=>{
+            //     if(valor.checked){
+            //         vetor[index] = valor.value;
+            //         console.log(valor.value);
+            //     }
+            // });
+
+
+            //3ª RESOLUÇÃO - Captura via querySelectorAll
+            let temp = document.querySelectorAll(`[name=habilidades]:checked`);
+            temp.forEach((valor, index)=>{
+                vetor[index] = valor.value;
+                console.log(index, valor.value);
+            })
+
+
+            alert(`
+                Nome: ${form.nome_completo.value}
+                Nascimento: ${form.data.value}
+                Vaga: ${form.cargo.value}
+                Habilidades: ${vetor}
+                Cursos: ${form.cursos_textarea.value}
+            `);
+
+            // Enviar os dados para o Firebase
+            const usersRef = ref(database, 'users');
+            push(usersRef, {
+            nome: form.nome_completo.value,
+            data: form.data.value,
+            radio: form.cargo.value,
+            cursos: form.cursos_textarea.value,
+            checks: vetor
+
+            }).then(() => {
+                alert('Dados enviados com sucesso!');
+                console.log("Dados enviados com sucesso!");
+            // Faça qualquer ação adicional aqui, como redirecionar o usuário ou exibir uma mensagem de sucesso.
+            }).catch((error) => {
+                console.error('Erro ao enviar dados:', error);
+            });
+
+        })
+
     </script> 
+    
 </body>
 </html>
