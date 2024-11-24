@@ -1,0 +1,16 @@
+:root{
+    --var-azul: blue;
+    --var--amarelo: yellow;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header p{
+    display: flex;
+    background-color: var(--var--amarelo);
+    width: 200px;
+
+    color: var(--var-azul);
+}
