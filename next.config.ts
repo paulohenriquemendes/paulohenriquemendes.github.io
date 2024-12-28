@@ -10,6 +10,9 @@ module.exports = {
   assetPrefix: './',
   basePath: '/paulohenriquemendes',
   trailingSlash: true,
+  images: {
+    unoptimized: true, // Desativa a otimização de imagens
+  },
 }
 
 module.exports = nextConfig;
