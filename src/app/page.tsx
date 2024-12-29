@@ -1,16 +1,16 @@
-import Image from "next/image";
+import Cabecalho from './pages/cabecalho';
+import Head from 'next/head';
 
 export default function Home() {
   return (
-  <div>
-<h1>Olá mundohhhh!</h1>
-<Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-  </div>
+    <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+      </Head>
+      <main>
+        <Cabecalho />
+      </main>
+    </>
   );
 }
