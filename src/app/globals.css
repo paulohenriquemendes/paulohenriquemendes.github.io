@@ -19,3 +19,8 @@ body {
   background: var(--background);
   font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
 }
+
+
+.svg-color {
+  fill: red; /* Altere para a cor desejada */
+}

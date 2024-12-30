@@ -12,6 +12,8 @@ module.exports = {
   trailingSlash: true,
   images: {
     unoptimized: true, // Desativa a otimização de imagens
+    loader: 'custom',
+    loaderFile: './my-loader.ts',
   },
 }
 

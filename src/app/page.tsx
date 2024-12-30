@@ -1,6 +1,8 @@
 import Cabecalho from './pages/cabecalho';
 import Capa from './pages/capa';
 import Head from 'next/head';
+import Rodape from './rodape';
+import Itens from './pages/itens';
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <main>
         <Cabecalho />
         <Capa />
+        <Rodape />
+        <Itens/>
       </main>
     </>
   );
