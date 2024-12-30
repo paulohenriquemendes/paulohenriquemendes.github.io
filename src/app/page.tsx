@@ -1,4 +1,5 @@
 import Cabecalho from './pages/cabecalho';
+import Capa from './pages/capa';
 import Head from 'next/head';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       </Head>
       <main>
         <Cabecalho />
+        <Capa />
       </main>
     </>
   );
