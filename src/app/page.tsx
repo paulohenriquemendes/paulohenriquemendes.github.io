@@ -1,3 +1,5 @@
+"use client"
+
 import Cabecalho from './pages/cabecalho';
 import Capa from './pages/capa';
 import Head from 'next/head';
