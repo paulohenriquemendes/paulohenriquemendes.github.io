@@ -34,7 +34,7 @@ export default function Cabecalho() {
           />
           <div className="text-zinc-300 text-5xl font-thin font-hanken">MENDES</div>
           <div className="text-zinc-300 text-sm font-normal font-hanken leading-normal">
-            desenvolvimento<br /> & design
+            desenvolvimento<br /> de Sistemas
           </div>
         </div>
 
