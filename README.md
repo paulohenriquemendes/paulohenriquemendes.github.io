@@ -6,13 +6,18 @@ Site pessoal publicado com GitHub Pages.
 
 - `index.html`: estrutura principal do site
 - `styles.css`: estilos visuais
-- `script.js`: carregamento de repositórios do GitHub e postagens do LinkedIn
-- `linkedin-posts.json`: arquivo consumido pela seção de postagens do LinkedIn
+- `js/main.js`: inicializacao da pagina
+- `js/github.js`: carga e renderizacao dos repositorios
+- `js/linkedin.js`: carga e renderizacao das postagens do LinkedIn
+- `js/utils.js`: funcoes auxiliares de formatacao e seguranca
+- `js/config.js`: configuracoes centrais do site
+- `js/dom.js`: referencias do DOM
+- `linkedin-posts.json`: arquivo consumido pela secao de postagens do LinkedIn
 
-## Publicação
+## Publicacao
 
-O projeto é estático e pode ser publicado diretamente no GitHub Pages.
+O projeto e estatico e pode ser publicado diretamente no GitHub Pages.
 
-## Automação
+## Automacao
 
-Existe um workflow para atualizar o arquivo `linkedin-posts.json` com as últimas postagens públicas do LinkedIn.
+Existe um workflow para atualizar o arquivo `linkedin-posts.json` com as ultimas postagens publicas do LinkedIn.
