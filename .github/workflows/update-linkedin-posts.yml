@@ -1,4 +1,4 @@
-name: Update LinkedIn Posts
+name: Atualizar postagens do LinkedIn
 
 on:
   workflow_dispatch:
@@ -13,30 +13,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Baixar repositorio
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install Playwright
+      - name: Instalar Playwright
         run: |
           npm init -y
           npm install playwright
 
-      - name: Scrape LinkedIn public posts
+      - name: Capturar postagens do LinkedIn
         env:
           LINKEDIN_ACTIVITY_URL: https://www.linkedin.com/in/paulo-henrique-mendes/recent-activity/all/
           LINKEDIN_PROFILE_URL: https://www.linkedin.com/in/paulo-henrique-mendes/
           LINKEDIN_LI_AT: ${{ secrets.LINKEDIN_LI_AT }}
         run: node .github/scripts/update-linkedin-posts.mjs
 
-      - name: Commit updated JSON
+      - name: Salvar atualizacao no repositorio
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add linkedin-posts.json
-          git diff --cached --quiet || git commit -m "chore: update LinkedIn posts"
+          git diff --cached --quiet || git commit -m "chore: atualizar postagens do LinkedIn"
           git push
